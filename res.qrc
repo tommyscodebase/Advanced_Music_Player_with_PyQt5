@@ -1,0 +1,29 @@
+<RCC>
+  <qresource prefix="img">
+    <file>utils/images/like.png</file>
+    <file>utils/images/remove.png</file>
+    <file>utils/images/about.png</file>
+    <file>utils/images/addFromLocal.png</file>
+    <file>utils/images/clear.png</file>
+    <file>utils/images/app_icon.png</file>
+    <file>utils/images/current-music.png</file>
+    <file>utils/images/detail.png</file>
+    <file>utils/images/dialog-music.png</file>
+    <file>utils/images/duration.png</file>
+    <file>utils/images/loop.png</file>
+    <file>utils/images/loop-one.png</file>
+    <file>utils/images/min.png</file>
+    <file>utils/images/music_list.png</file>
+    <file>utils/images/music-dir.png</file>
+    <file>utils/images/MusicListItem.png</file>
+    <file>utils/images/music-voice.png</file>
+    <file>utils/images/next.png</file>
+    <file>utils/images/pase.png</file>
+    <file>utils/images/play.png</file>
+    <file>utils/images/play-random.png</file>
+    <file>utils/images/pre.png</file>
+    <file>utils/images/quit.png</file>
+    <file>utils/images/stop.png</file>
+    <file>utils/images/unpause.png</file>
+  </qresource>
+</RCC>

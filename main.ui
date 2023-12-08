@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MusicApp</class>
+ <widget class="QMainWindow" name="MusicApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>880</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>880</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Modern Music Player</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/img/utils/images/app_icon.png</normaloff>:/img/utils/images/app_icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QLabel" name="background_image">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>880</width>
+      <height>550</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>880</width>
+      <height>550</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>880</width>
+      <height>550</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>utils/bg_imgs/bg_0002_11.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bd_overlay">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>880</width>
+      <height>550</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>880</width>
+      <height>550</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>880</width>
+      <height>550</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>utils/bg_imgs/bg_overlay.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="title_frame">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>0</y>
+      <width>881</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:10px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="close_btn">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255, 20, 12, 200);
+}
+
+QPushButton:pressed{
+	background-color: rgba(255, 20, 12, 200);
+	border-color:rgba(255,255,255,30);
+	border-style:inset;
+	color:rgba(0,0,0,100);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/img/utils/images/quit.png</normaloff>:/img/utils/images/quit.png</iconset>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="minimize_btn">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,130);
+}
+
+QPushButton:pressed{
+	background-color: (255,255,255,130);
+	border-style:inset;
+	color:rgba(0,0,0,100);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/img/utils/images/min.png</normaloff>:/img/utils/images/min.png</iconset>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(79, 208, 178);</string>
+     </property>
+     <property name="text">
+      <string>M Beatz</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="res.qrc">:/img/utils/images/app_icon.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>301</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 150);
+border-radius: 15px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(79, 208, 178);</string>
+     </property>
+     <property name="text">
+      <string>Currently Playing</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(79, 208, 178);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="res.qrc">:/img/utils/images/current-music.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(79, 208, 178);</string>
+     </property>
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="current_song_name">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>281</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Song name goes here</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(79, 208, 178);</string>
+     </property>
+     <property name="text">
+      <string>Path</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="current_song_path">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>281</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Song path goes here</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="add_to_fav_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(255, 140, 64);</string>
+     </property>
+     <property name="text">
+      <string>Add to Favourites</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/img/utils/images/like.png</normaloff>:/img/utils/images/like.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="add_to_playlist_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 140, 64);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>  Add to Playlist</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/img/utils/images/music_list.png</normaloff>:/img/utils/images/music_list.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QDial" name="volume_dial">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>290</y>
+      <width>201</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ClosedHandCursor</cursorShape>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="tracking">
+     <bool>false</bool>
+    </property>
+    <property name="wrapping">
+     <bool>false</bool>
+    </property>
+    <property name="notchesVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>861</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QFrame" name="frame_4">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 50);
+border-radius:10px;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="play_btn">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,100);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res.qrc">
+            <normaloff>:/img/utils/images/pase.png</normaloff>:/img/utils/images/pase.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pause_btn">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,100);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res.qrc">
+            <normaloff>:/img/utils/images/play.png</normaloff>:/img/utils/images/play.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stop_btn">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,100);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res.qrc">
+            <normaloff>:/img/utils/images/stop.png</normaloff>:/img/utils/images/stop.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="previous_btn">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,100);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res.qrc">
+            <normaloff>:/img/utils/images/pre.png</normaloff>:/img/utils/images/pre.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="next_btn">
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>25</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,100);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res.qrc">
+            <normaloff>:/img/utils/images/next.png</normaloff>:/img/utils/images/next.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loop_one_btn">
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>25</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,100);
+}
+
+QPushButton:checked{
+	background-color: rgba(255,255,255,100);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res.qrc">
+            <normaloff>:/img/utils/images/loop-one.png</normaloff>:/img/utils/images/loop-one.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="shuffle_songs_btn">
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>25</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat:no-repeat;
+	border:none;
+	background-position:center center;
+
+}
+
+QPushButton:hover{
+	background-color: rgba(255,255,255,100);
+}
+
+
+QPushButton:checked{
+	background-color: rgba(255,255,255,100);
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res.qrc">
+            <normaloff>:/img/utils/images/play-random.png</normaloff>:/img/utils/images/play-random.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="music_slider">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 15px; 
+   padding:3px;
+	background: rgba(0, 255, 127, 100);
+    margin: 2px 0;
+	border-radius:11px;
+}
+
+QSlider::handle:horizontal {
+    background:  rgb(255, 200, 50);
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 9px;
+}</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="time_label">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+padding:2px;
+border-radius:5px</string>
+       </property>
+       <property name="text">
+        <string>00:00:00 / 00:00:00</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>60</y>
+      <width>551</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 50);
+border-radius:15px;</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="song_list_page">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QFrame" name="frame_5">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Song List</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_6">
+           <property name="maximumSize">
+            <size>
+             <width>130</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QPushButton" name="add_songs_btn">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:5px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="res.qrc">
+                <normaloff>:/img/utils/images/addFromLocal.png</normaloff>:/img/utils/images/addFromLocal.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="delete_selected_btn">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:5px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="res.qrc">
+                <normaloff>:/img/utils/images/clear.png</normaloff>:/img/utils/images/clear.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="delete_all_songs_btn">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:5px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="res.qrc">
+                <normaloff>:/img/utils/images/remove.png</normaloff>:/img/utils/images/remove.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="loaded_songs_listWidget">
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor" stdset="0">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(86, 227, 194);
+background-color: rgba(0, 0, 0, 100);
+
+selection-background-color: rgb(255, 140, 64);
+selection-color: rgb(255, 255, 255);
+padding:10px;
+</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="playlists_page">
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>131</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgab(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Playlists</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="load_selected_playlist_btn">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>20</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 127);
+border-radius:15px;</string>
+      </property>
+      <property name="text">
+       <string>Load Selected</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="playlists_listWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>531</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(86, 227, 194);
+background-color: rgba(0, 0, 0, 100);
+
+selection-background-color: rgb(255, 140, 64);
+selection-color: rgb(255, 255, 255);
+padding:10px;
+</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="new_playlist_btn">
+      <property name="geometry">
+       <rect>
+        <x>47</x>
+        <y>324</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border-radius:15px;
+}
+
+QPushButton:hover{
+	color: rgb(0, 85, 0);
+	background-color: rgb(0, 255, 127);
+}</string>
+      </property>
+      <property name="text">
+       <string>Create New</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="remove_selected_playlist_btn">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>324</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border-radius:15px;
+}
+
+QPushButton:hover{
+	color: rgb(202, 0, 0);
+	background-color: rgb(255, 176, 176);
+}</string>
+      </property>
+      <property name="text">
+       <string>Remove Selected</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="remove_all_playlists_btn">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>324</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 255, 255);
+	border-radius:15px;
+}
+
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 44, 44);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Remove All</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="favourites_page">
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>131</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgab(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Favourites</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="favourites_listWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>531</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(86, 227, 194);
+background-color: rgba(0, 0, 0, 100);
+
+selection-background-color: rgb(255, 140, 64);
+selection-color: rgb(255, 255, 255);
+padding:10px;
+</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_selected_favourite_btn">
+      <property name="geometry">
+       <rect>
+        <x>441</x>
+        <y>20</y>
+        <width>33</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/img/utils/images/clear.png</normaloff>:/img/utils/images/clear.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_all_favourites_btn">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>20</y>
+        <width>33</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/img/utils/images/remove.png</normaloff>:/img/utils/images/remove.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_7">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>430</y>
+      <width>501</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QPushButton" name="song_list_btn">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 127);
+border-radius:15px;</string>
+       </property>
+       <property name="text">
+        <string>Song List</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="playlists_btn">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 127);
+border-radius:15px;</string>
+       </property>
+       <property name="text">
+        <string>Playlists</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="favourites_btn">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 140, 64);
+border-radius:15px;</string>
+       </property>
+       <property name="text">
+        <string>Favourites</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="volume_label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>380</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(104, 114, 126);</string>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+   </widget>
+   <zorder>background_image</zorder>
+   <zorder>bd_overlay</zorder>
+   <zorder>title_frame</zorder>
+   <zorder>frame_2</zorder>
+   <zorder>frame_3</zorder>
+   <zorder>frame_7</zorder>
+   <zorder>stackedWidget</zorder>
+   <zorder>volume_dial</zorder>
+   <zorder>volume_label</zorder>
+  </widget>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/pase.png</normaloff>:/img/utils/images/pase.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionPause_Unpause">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/play.png</normaloff>:/img/utils/images/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause/Unpause</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/next.png</normaloff>:/img/utils/images/next.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/pre.png</normaloff>:/img/utils/images/pre.png</iconset>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/img/utils/images/sliderHandle.png</normaloff>:/img/utils/images/sliderHandle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionAdd_Selected_to_Favourites">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/like.png</normaloff>:/img/utils/images/like.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Selected to Favourites</string>
+   </property>
+  </action>
+  <action name="actionAdd_all_to_Favouries">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/like.png</normaloff>:/img/utils/images/like.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add all to Favouries</string>
+   </property>
+  </action>
+  <action name="actionLoad_Selected_Playlist">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/music_list.png</normaloff>:/img/utils/images/music_list.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load Selected</string>
+   </property>
+  </action>
+  <action name="actionDelete_Selected_Playlist">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/clear.png</normaloff>:/img/utils/images/clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Selected</string>
+   </property>
+  </action>
+  <action name="actionDelete_All_Playlists">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/remove.png</normaloff>:/img/utils/images/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete All</string>
+   </property>
+  </action>
+  <action name="actionRemove_Selected_Favourite">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/clear.png</normaloff>:/img/utils/images/clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove Selected</string>
+   </property>
+  </action>
+  <action name="actionRemove_All_Favourites">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/remove.png</normaloff>:/img/utils/images/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove All</string>
+   </property>
+  </action>
+  <action name="actionSave_Selected_to_a_Playlist">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/MusicListItem.png</normaloff>:/img/utils/images/MusicListItem.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Selected to a Playlist</string>
+   </property>
+  </action>
+  <action name="actionSave_all_to_a_playlist">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/dialog-music.png</normaloff>:/img/utils/images/dialog-music.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save all to a playlist</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>minimize_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApp</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>799</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>close_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MusicApp</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>849</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>volume_dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>volume_label</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>390</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
