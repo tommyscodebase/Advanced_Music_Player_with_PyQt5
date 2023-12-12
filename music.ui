@@ -207,7 +207,7 @@ QPushButton:hover{
             </property>
             <property name="icon">
              <iconset resource="res.qrc">
-              <normaloff>:/img/utils/images/sliderHandle.png</normaloff>:/img/utils/images/sliderHandle.png</iconset>
+              <normaloff>:/img/utils/images/stop.png</normaloff>:/img/utils/images/stop.png</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -1050,7 +1050,7 @@ QPushButton:hover{
             </property>
             <property name="icon">
              <iconset resource="res.qrc">
-              <normaloff>:/img/utils/images/sliderHandle.png</normaloff>:/img/utils/images/sliderHandle.png</iconset>
+              <normaloff>:/img/utils/images/stop.png</normaloff>:/img/utils/images/stop.png</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>

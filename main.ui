@@ -1586,8 +1586,8 @@ border-radius:15px;</string>
   </action>
   <action name="actionStop">
    <property name="icon">
-    <iconset>
-     <normaloff>:/img/utils/images/sliderHandle.png</normaloff>:/img/utils/images/sliderHandle.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/img/utils/images/stop.png</normaloff>:/img/utils/images/stop.png</iconset>
    </property>
    <property name="text">
     <string>Stop</string>
